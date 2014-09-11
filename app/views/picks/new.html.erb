@@ -1,0 +1,11 @@
+<%= render 'shared/header', header: "Make a pick" %>
+<%= render 'shared/errors', obj: @pick %>
+
+<% if logged_in? %>
+  <%= form_for @pick do |f| %>
+    <%= f.label "Url" %>
+    <%= f.text_field :pick_url %>
+    <br/>
+    <%= f.submit "Make a pick" %>  
+  <% end %>
+<% end %>

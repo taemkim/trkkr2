@@ -1,0 +1,17 @@
+<% if logged_in? %>
+<h3><%=link_to @user.username, user_path(@user.username)%></h3>
+
+<p>
+  score: <%=@user.user_score%>
+</br>
+  rank: <%=@user.user_rank%>
+</p>
+
+<p>
+  <ul>
+  	<% @user.picks.each do |pick| %>
+  	  <li><%= pick.pick_time_ranking %><li>
+  	<% end %>
+  </ul>
+</p>
+<% end %>

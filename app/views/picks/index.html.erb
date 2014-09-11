@@ -1,0 +1,11 @@
+<%= render 'shared/header', header: "Trkkr2" %>
+
+All picks
+
+<ul>
+  <% @picks.each do |pick| %>
+    <li>
+      <%= pick.pick_url  %>
+    </li>
+  <% end %>
+</ul>

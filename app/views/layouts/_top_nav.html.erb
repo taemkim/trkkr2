@@ -1,0 +1,9 @@
+<% if logged_in? %>
+  <%= link_to 'New Pick', new_pick_path %> |
+  <%= link_to 'Log Out', logout_path %> |
+  <%= current_user.username %>
+<% else %>
+  <%= link_to 'Register', new_user_path %> |
+  <%= link_to 'Log In', login_path %>  
+<% end %>
+
